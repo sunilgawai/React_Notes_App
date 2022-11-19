@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { New, View, Edit, NoteForm } from "./components";
@@ -10,7 +11,7 @@ function App() {
     <Container>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/new' element={<NoteForm />} />
+        <Route path='/new' element={<New />} />
         <Route path='/:id'>
           <Route index element={<View />} />
           <Route path='edit' element={<Edit />} />
